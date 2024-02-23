@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff3333;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e60000;
+        }
+    </style>
+    <script>
+        function deleteProfile() {
+            var confirmation = confirm("Are you sure you want to delete your profile?");
+            if (confirmation) {
+                // Perform the actual deletion logic here.
+                // This could be an AJAX request to a server-side script.
+                // Example: You can use the Fetch API or XMLHttpRequest to send a request to the server.
+                // For simplicity, the following line just redirects to home.html after deletion.
+                alert("Profile deleted successfully111!");
+                window.location.href = "home.html"; // Redirect to home.html
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h2>Delete Profile</h2>
+        <p>Deleting your profile is irreversible. Are you sure you want to proceed?</p>
+        <input type="submit" value="Delete Profile" onclick="deleteProfile()">
+    </form>
+</body>
+</html>
